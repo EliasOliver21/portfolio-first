@@ -1,8 +1,8 @@
+import { AppRoutes } from './routes';
+
 export function App() {
 
   return (
-    <>
-      Teste
-    </>
+    <AppRoutes></AppRoutes>
   )
 }
