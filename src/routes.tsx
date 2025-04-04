@@ -5,7 +5,6 @@ import {Contact} from './pages/Contact.tsx';
 import {Projects} from './pages/Projects.tsx';
 import {Navbar} from './components/Navbar.tsx';
 import { Box, Grid } from '@mui/material';
-import { Directions } from '@mui/icons-material';
 
 
 export const AppRoutes = () => {
