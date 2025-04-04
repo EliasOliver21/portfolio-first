@@ -1,54 +1,64 @@
-# React + TypeScript + Vite
+# Portifólio Pessoal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p> Este repósitório tem como propósito documentar a criação de um portifólio pessoal, apresentando as minhas informações, projetos que já realizei/participei e meu contato. </p>
 
-Currently, two official plugins are available:
+# Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<p>As tecnologias utilizadas para realizar o projeto foram:</p>
 
-## Expanding the ESLint configuration
+<p> (React)[https://react.dev/]
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+  - O react é um framework do javascript para desenvolvimento web. Muito utilizado o React é muito prático e eficiente quando se trata do desenvolvimento de páginas na web.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+<p> (Vite)[https://vite.dev/]
+
+  - O Vite é um servidor de desenvolvimento local, utilizado para obter um rápido carregamento e agilidade na fase de desenvolvimento.
+
+<p> (Material UI)[https://mui.com/material-ui/?srsltid=AfmBOopwJq5sbgaQg_yt6SbDk0gD78QbWf8XeA0v1Ys_JoBK9oO2DoKi]
+
+  - O Material UI é uma biblioteca open-source que implementa o pãdrão de interface gráfico Material Design da Google.
+
+
+# Executando o projeto
+
+Para executar o projeto em sua máquina localmente, é necessário ter o node instalado. Para isso execute os seguintes comandos:
+
+```
+# Descarregar e instalar a fnm:
+curl -o- https://fnm.vercel.app/install | bash
+
+# Descarregar e instalar a Node.js:
+fnm install 22
+
+# Consultar a versão da Node.js:
+node -v # Deveria imprimir "v22.14.0".
+
+# Consultar a versão da npm:
+npm -v # Deveria imprimir "10.9.2".
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Após instalar o node, clone o repositório em seu dispositivo e digite os comandos abaixo no terminal:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```
+#Instalar as dependencias do projeto
+npm install
+```
+
+<p>É necessário instalar também o material UI, execute:
+
+```
+npm install @mui/material @emotion/react @emotion/styled
+```
+
+<p>Após isso execute o comando abaixo para executar o projeto:
+
+```
+npm run dev
+```
+
+<p> Abra seu navegador e entre no seguinte link:
+
+```
+http://localhost:5173/
 ```
