@@ -1,20 +1,23 @@
-import {BrowserRouter, Routes, Route,Navigate} from 'react-router'
-import {} from 'react-dom'
-import { Home } from './pages/Home'
-import { Contact } from './pages/Contact'
-import {ButtonAppBar} from './components/Top-Bar.tsx';
+import {BrowserRouter, Routes, Route,Navigate} from 'react-router';
+import {} from 'react-dom';
+import {Home} from './pages/Home.tsx';
+import {Contact} from './pages/Contact.tsx';
+import {Projects} from './pages/Projects.tsx';
+import {Navbar} from './components/Navbar.tsx';
+
 
 export const AppRoutes = () => {
 
     return(
         <BrowserRouter>
 
-            <ButtonAppBar></ButtonAppBar>
+            <Navbar></Navbar>
 
             <Routes>
 
                 <Route path= '/home' element= {<Home/>}/>
-                <Route path= '/contact' element= {<Contact/>}/>
+                <Route path= '/contacts' element= {<Contact/>}/>
+                <Route path= '/projects' element= {<Projects/>}/>
                 <Route path= '*' element= {<Navigate to = '/home'/>}/>
 
             </Routes>

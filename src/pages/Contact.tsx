@@ -1,18 +1,10 @@
-import {Link} from 'react-router'
 
 export const Contact = () => {
 
 
     return <>
     
-        Contact
+        <p>Contact</p>
 
-        <Link to= '/home'>
-
-            Home
-        
-        </Link>
-       
-    
     </>
 }
