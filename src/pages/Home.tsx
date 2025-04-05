@@ -7,10 +7,9 @@ export const Home = () => {
 
         backgroundColor: theme.palette.primary.main,
         height: '100vh',
-        display:'flex',
         alignItems:'center',
         [theme.breakpoints.up('xs')]: { // <= mobile
-            paddingTop: "100px",
+            
 
         },
         [theme.breakpoints.up('md')]: { // >=mobile
@@ -27,12 +26,12 @@ export const Home = () => {
 
     return<>
 
-        <StyledHome>
-            <Container maxWidth='lg'>
+        <StyledHome >
+            <Container maxWidth='lg' sx={{paddingTop:'150px'}}>
 
-                <Grid container rowSpacing={5} sx={{alignItems:'center', justifyContent:'center',justifyItems:'center'}}>
+                <Grid container rowSpacing={7} sx={{justifyContent:'center'}}>
 
-                    <Box sx={{justifyContent:'center',alignContent:'center',alignItems:'center',textAlign:'center'}}>
+                    <Box sx={{textAlign:'center'}}>
 
                         <StyledImg src={Avatar}/>
 
@@ -40,7 +39,8 @@ export const Home = () => {
 
                     <Box textAlign={'center'}>
 
-                        <Typography color="primary.contrastText">Descrição</Typography>
+                        <Typography color="primary.contrastText" textAlign={'center'} variant="h5">OI, meu nome é Elias!</Typography>
+                        <Typography color="primary.contrastText" textAlign={'center'} variant="h5">Sou estudante do 7º semestre do curso de engenharia de software na UnB. Sempre amei a tecnologia e a ciência, apesar de escolher as engenharias rsrs. Veja os projetos e aplicações que já desenvolvi ou participei do processo de desenvolvimento, caso queira, me contate através das minhas redes.</Typography>
 
                     </Box>
 

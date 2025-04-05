@@ -7,6 +7,7 @@ import {Navbar} from './components/Navbar.tsx';
 import { Box, Grid } from '@mui/material';
 
 
+
 export const AppRoutes = () => {
 
     return(
@@ -14,7 +15,7 @@ export const AppRoutes = () => {
         
         <BrowserRouter>
 
-            <Grid>
+            <Grid >
 
                 <Navbar></Navbar>
 

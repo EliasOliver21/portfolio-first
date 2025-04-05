@@ -1,4 +1,5 @@
 import { Box, Container, Grid, styled, Typography } from "@mui/material";
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 export const Contact = () => {
 
@@ -6,7 +7,6 @@ export const Contact = () => {
 
         backgroundColor: theme.palette.primary.main,
         height: '100vh',
-        display:'flex',
         alignItems:'center',
         [theme.breakpoints.up('xs')]: { // <= mobile
             paddingTop: "100px",
@@ -27,21 +27,31 @@ export const Contact = () => {
     return<>
 
         <StyledHome>
-            <Container maxWidth='lg'>
+            <Container maxWidth='lg' sx={{padding:'150px'}}>
 
-                <Grid direction={'column'}container rowSpacing={5} sx={{alignItems:'center', justifyContent:'center',justifyItems:'center'}}>
+                <Grid color="primary.contrastText" direction={'column'}container rowSpacing={5} sx={{alignItems:'center', justifyContent:'center',justifyItems:'center'}}>
 
-                    <Box sx={{justifyContent:'center'}}>
+                    <Typography >Minhas Redes</Typography>
 
-                        <Typography color="primary.contrastText">Contact</Typography>
 
-                    </Box>
+                    <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 4 }} sx={{justifyItems:'center',alignItems:'center'}}>
+                        
+                        <Grid size={6}>
+                            <GitHubIcon>GitHub</GitHubIcon>
+                        </Grid>
+                        <Grid size={6}>
+                            asd
+                        </Grid>
+                        <Grid size={6}>
+                            asd
+                        </Grid>
+                        <Grid size={6}>
+                            asd
+                        </Grid>
+                        
+                    </Grid>
 
-                    <Box textAlign={'center'}>
-
-                        <Typography color="primary.contrastText">Descrição</Typography>
-
-                    </Box>
+                   
 
                 </Grid>
 
