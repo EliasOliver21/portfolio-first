@@ -7,7 +7,7 @@ export const Home = () => {
 
         backgroundColor: theme.palette.primary.main,
         height: '100vh',
-        alignItems:'center',
+        
         [theme.breakpoints.up('xs')]: { // <= mobile
             
 
@@ -27,9 +27,9 @@ export const Home = () => {
     return<>
 
         <StyledHome >
-            <Container maxWidth='lg' sx={{paddingTop:'150px'}}>
+            <Container maxWidth='lg' >
 
-                <Grid container rowSpacing={7} sx={{justifyContent:'center'}}>
+                <Grid container rowSpacing={7} sx={{justifyContent:'center',paddingTop:'5vh'}}>
 
                     <Box sx={{textAlign:'center'}}>
 

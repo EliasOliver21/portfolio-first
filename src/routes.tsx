@@ -19,17 +19,27 @@ export const AppRoutes = () => {
 
                 <Navbar></Navbar>
 
-                <Routes>
+                <Box >
 
-                    <Route path= '/home' element= {<Home/>}/>
-                    <Route path= '/contacts' element= {<Contact/>}/>
-                    <Route path= '/projects' element= {<Projects/>}/>
-                    <Route path= '*' element= {<Navigate to = '/home'/>}/>
 
-                </Routes>
+                    <Routes>
+
+                        <Route path= '/home' element= {<Home/>}/>
+                        <Route path= '/contacts' element= {<Contact/>}/>
+                        <Route path= '/projects' element= {<Projects/>}/>
+                        <Route path= '*' element= {<Navigate to = '/home'/>}/>
+
+                    </Routes>
+
+
+
+                </Box>
+
+                
             </Grid>
         
         </BrowserRouter>
+        
         </>
     )   
 }

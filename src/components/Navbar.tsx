@@ -12,14 +12,14 @@ export const Navbar = () => {
   return (
 
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="absolute">
+      <AppBar position="static" sx={{  justifyContent:'center', alignItems:'center'}}>
           <Typography>
 
             <Toolbar sx={{justifyContent:"space-evenly"}} >
 
-              <Grid><Button href='/home' color="inherit">Home</Button></Grid>
-              <Grid><Button href='/projects' color="inherit">Projects</Button></Grid>
-              <Grid><Button href='/contacts' color="inherit">Contact</Button></Grid>
+              <Grid><Button href='/home' color="secondary" variant='text' >Home</Button></Grid>
+              <Grid><Button href='/projects' color="secondary" variant='text'  >Projects</Button></Grid>
+              <Grid><Button href='/contacts' color="secondary" variant='text'  >Contact</Button></Grid>
                 
             </Toolbar>
 

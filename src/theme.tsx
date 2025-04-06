@@ -7,7 +7,7 @@ const theme = createTheme({
       main: '#030303',
     },
     secondary: {
-      main: '#767d8f',
+      main: '#dbe1d5',
     },
   },
   typography:{
@@ -22,6 +22,7 @@ const theme = createTheme({
             // '"Apple Color Emoji"',
             // '"Segoe UI Emoji"',
             // '"Segoe UI Symbol"',
+            //#767d8f
   }
 });
 
