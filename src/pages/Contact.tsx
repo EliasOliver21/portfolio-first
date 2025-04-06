@@ -1,4 +1,4 @@
-import { Box, Button, Container, Grid, IconButton, styled, Typography } from "@mui/material";
+import { Box, Container, Grid, IconButton, styled, Typography } from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
@@ -19,12 +19,6 @@ export const Contact = () => {
             paddingTop: "0",
         }
 
-    }))
-
-    const StyledImg = styled("img")(({ theme }) => ({
-        width: "30%",
-        borderRadius: "50%",
-        border: `1px solid ${theme.palette.primary.contrastText}`
     }))
 
     return<>
