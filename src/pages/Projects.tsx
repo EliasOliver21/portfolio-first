@@ -18,12 +18,6 @@ export const Projects = () => {
 
     }))
 
-    const StyledImg = styled("img")(({ theme }) => ({
-        width: "30%",
-        borderRadius: "50%",
-        border: `1px solid ${theme.palette.primary.contrastText}`
-    }))
-
     return<>
 
         <StyledHome>
