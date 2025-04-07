@@ -12,7 +12,7 @@ export const Contact = () => {
         height: '100vh',
         alignItems:'center',
         [theme.breakpoints.up('xs')]: { // <= mobile
-            paddingTop: "100px",
+            paddingTop:'5vh'
 
         },
         [theme.breakpoints.up('md')]: { // >=mobile

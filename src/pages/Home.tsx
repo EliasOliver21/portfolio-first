@@ -9,7 +9,7 @@ export const Home = () => {
         height: '100vh',
         
         [theme.breakpoints.up('xs')]: { // <= mobile
-            
+            paddingTop:"5vh"
 
         },
         [theme.breakpoints.up('md')]: { // >=mobile
