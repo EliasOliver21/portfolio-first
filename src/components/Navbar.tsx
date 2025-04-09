@@ -24,8 +24,13 @@ export const Navbar = () => {
             </Toolbar>
 
           </Typography>
-
+          
       </AppBar>
+     
+      
     </Box>
+
+    
+    
   );
 }

@@ -25,7 +25,7 @@ export const Contact = () => {
 
         <StyledHome>
 
-            <Container maxWidth='lg' sx={{paddingTop:'15vh'}}>
+            <Container maxWidth='sm' sx={{paddingTop:'15vh'}}>
 
                 <Grid color="primary.contrastText" container direction="column" sx={{alignItems: "center"}}>
                     
