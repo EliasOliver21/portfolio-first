@@ -23,14 +23,35 @@ export const Projects = () => {
         <StyledHome>
             <Container maxWidth='lg'>
 
-                <Grid container rowSpacing={5} sx={{justifyContent:'center'}}>
+                <Grid container rowSpacing={2}  sx={{justifyItems:'center',justifyContent:'center',alignContent:'center',textAlign:'center'}}>
+                        
+                        <Grid size={6}>
 
-                    <Box textAlign={'center'}>
+                            
+                            <Typography color="primary.contrastText">Github</Typography>
 
-                        <Typography color="primary.contrastText">Descrição</Typography>
+                        </Grid>
 
-                    </Box>
+                        <Grid size={6} sx={{justifyItems:'center',justifyContent:'center',alignContent:'center',textAlign:'center'}}>
+                         
+                            <Typography color="primary.contrastText">Github</Typography>
 
+                        </Grid>
+
+                        <Grid size={6} sx={{textAlign:'center',justifyItems:'center',justifyContent:'center',alignContent:'center',alignItems:"center"}}>
+                            
+                            <Typography color="primary.contrastText">Github</Typography>
+
+                        </Grid>
+
+                        <Grid size={6} sx={{textAlign:'center',justifyItems:'center',justifyContent:'center',alignContent:'center'}}>
+                          
+                            
+                            <Typography color="primary.contrastText">Github</Typography>
+
+                             
+                        </Grid>
+                        
                 </Grid>
 
                 

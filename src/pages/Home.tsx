@@ -21,7 +21,15 @@ export const Home = () => {
     const StyledImg = styled("img")(({ theme }) => ({
         width: "30%",
         borderRadius: "50%",
-        border: `1px solid ${theme.palette.primary.contrastText}`
+        border: `1px solid ${theme.palette.primary.contrastText}`,
+        [theme.breakpoints.up('xs')]: { // <= mobile
+            width:'60%'
+
+        },
+        [theme.breakpoints.up('md')]: { // >=mobile
+            width:'35%'
+        }
+
     }))
 
     return<>
@@ -29,7 +37,7 @@ export const Home = () => {
         <StyledHome >
             <Container maxWidth='lg' >
 
-                <Grid container rowSpacing={7} sx={{justifyContent:'center',paddingTop:'5vh'}}>
+                <Grid container rowSpacing={2} sx={{justifyContent:'center',paddingTop:'5vh'}}>
 
                     <Box sx={{textAlign:'center'}}>
 
