@@ -5,16 +5,22 @@ export const Home = () => {
 
     const StyledHome = styled("div")(({theme}) => ({
 
-        backgroundColor: theme.palette.primary.main,
-        height: '100vh',
-        
-        [theme.breakpoints.up('xs')]: { // <= mobile
-            paddingTop:"5vh"
+        backgroundColor: theme.palette.primary.main,       
+        paddingTop:"5vh",
+        [theme.breakpoints.down('lg')]: { // <= mobile
+            paddingTop:"5vh",
+            height: '100vh'
 
         },
         [theme.breakpoints.up('md')]: { // >=mobile
-            paddingTop: "0",
+            height:'100vh'
+            
+        },
+        [theme.breakpoints.down('md')]: { // >=mobile
+            paddingTop: "5vh",
+            
         }
+        
 
     }))
 
@@ -37,7 +43,7 @@ export const Home = () => {
         <StyledHome >
             <Container maxWidth='lg' >
 
-                <Grid container rowSpacing={2} sx={{justifyContent:'center',paddingTop:'5vh'}}>
+                <Grid container rowSpacing={2} sx={{justifyContent:'center'}}>
 
                     <Box sx={{textAlign:'center'}}>
 
@@ -47,8 +53,8 @@ export const Home = () => {
 
                     <Box textAlign={'center'}>
 
-                        <Typography color="primary.contrastText" textAlign={'center'} variant="h5">OI, meu nome é Elias!</Typography>
-                        <Typography color="primary.contrastText" textAlign={'center'} variant="h5">Sou estudante do 7º semestre do curso de engenharia de software na UnB. Sempre amei a tecnologia e a ciência, apesar de escolher as engenharias rsrs. Veja os projetos e aplicações que já desenvolvi ou participei do processo de desenvolvimento, caso queira, me contate através das minhas redes.</Typography>
+                        <Typography color="secondary" textAlign={'center'} variant="h4">OI, meu nome é Elias!</Typography>
+                        <p></p><Typography color="secondary" textAlign={'justify'} variant="h6">Sou estudante do 7º semestre do curso de engenharia de software na UnB. Sempre amei a tecnologia e a ciência, apesar de escolher as engenharias rsrs. Veja os projetos e aplicações que já desenvolvi ou participei do processo de desenvolvimento, caso queira, me contate através das minhas redes.</Typography>
 
                     </Box>
 
