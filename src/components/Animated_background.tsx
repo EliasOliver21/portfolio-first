@@ -1,11 +1,33 @@
 import { Box } from "@mui/material";
+import background_animated from "../assets/animated.mp4"
 
-export const animated_background = () => {
+export const Animated_background = () => {
     return(
 
         <Box>
 
-            <video src=""></video>
+            <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            style={{
+                position:"absolute",
+                top: 65,
+                left:0,
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                zIndex: 0,
+                
+                
+            }}
+          >
+            <source
+              src= {background_animated}
+              type="video/mp4"
+            />
+          </video>
 
         </Box>
 
