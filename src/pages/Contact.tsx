@@ -3,6 +3,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { Animated_background } from "../components/Animated_background";
 
 export const Contact = () => {
 
@@ -28,16 +29,31 @@ export const Contact = () => {
             <Container maxWidth='sm' sx={{paddingTop:'15vh'}}>
 
                 <Grid color="primary.contrastText" container direction="column" sx={{alignItems: "center"}}>
+
+                    <Animated_background></Animated_background>
+                    
+                    <Box
+                        sx={{
+                        position: 'absolute',
+                        top: 65,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                        backgroundColor: 'rgba(0, 0, 0, 0.5)', // 0.5 = 50% escuro
+                        zIndex: 1,
+                        }}
+                        
+                    />
                     
                     <Box >
 
-                        <Typography variant="h4">Minhas Redes</Typography>
+                        <Typography variant="h4" sx={{position:"relative", zIndex:2}}>Minhas Redes</Typography>
 
                     </Box>
                     
 
 
-                    <Grid container rowSpacing={3}  paddingTop={'5vh'} columnSpacing={{ xs: 1, sm: 2, md: 0 }} sx={{justifyItems:'center',justifyContent:'center',alignContent:'center',textAlign:'center'}}>
+                    <Grid container rowSpacing={3} position={'relative'}  paddingTop={'5vh'} columnSpacing={{ xs: 1, sm: 2, md: 0 }} sx={{justifyItems:'center',justifyContent:'center',alignContent:'center',textAlign:'center',zIndex:2}}>
                         
                         <Grid size={6}>
 
