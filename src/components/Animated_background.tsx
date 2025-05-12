@@ -4,6 +4,7 @@ import background_animated from "../assets/animated.mp4"
 export const Animated_background = () => {
     return(
 
+
         <Box>
 
             <video
@@ -17,9 +18,9 @@ export const Animated_background = () => {
                 left:0,
                 width: '100%',
                 height: '100%',
+                borderRadius:"0%",
                 objectFit: 'cover',
-                zIndex: 0,
-                
+                zIndex: 0               
                 
             }}
           >

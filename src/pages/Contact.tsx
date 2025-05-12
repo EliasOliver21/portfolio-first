@@ -4,13 +4,13 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { Animated_background } from "../components/Animated_background";
+import theme from "../theme";
 
 export const Contact = () => {
 
     const StyledHome = styled("div")(({theme}) => ({
 
         backgroundColor: theme.palette.primary.main,
-        height: '100vh',
         alignItems:'center',
         [theme.breakpoints.up('xs')]: { // <= mobile
             paddingTop:'5vh'
@@ -24,9 +24,9 @@ export const Contact = () => {
 
     return<>
 
-        <StyledHome>
+        <StyledHome sx={{minHeight:"100vh"}}>
 
-            <Container maxWidth='sm' sx={{paddingTop:'15vh'}}>
+            <Container maxWidth='sm' sx={{paddingTop:'15vh',minHeight:"100vh"}}>
 
                 <Grid color="primary.contrastText" container direction="column" sx={{alignItems: "center"}}>
 
@@ -55,49 +55,54 @@ export const Contact = () => {
 
                     <Grid container rowSpacing={3} position={'relative'}  paddingTop={'5vh'} columnSpacing={{ xs: 1, sm: 2, md: 0 }} sx={{justifyItems:'center',justifyContent:'center',alignContent:'center',textAlign:'center',zIndex:2}}>
                         
-                        <Grid size={6}>
+                        <Grid size={7} borderRadius={100} >
 
-                            <IconButton component="a" rel="noopener noreferrer" href="https://www.github.com/EliasOliver21" target="_blank" color="inherit">
-                                
-                                <GitHubIcon/>
-                            
+                            <IconButton component="a" rel="noopener noreferrer" target="_blank" href="https://www.github.com/EliasOliver21" color="inherit" sx={{gap: "10px",'&:hover': {backgroundColor: theme.palette.secondary.dark},borderRadius:"55vh"}}>
+                                <GitHubIcon/>                        
+                                <Typography>Github</Typography>
+                           
                             </IconButton>
                             
-                            <Typography>Github</Typography>
+                            
 
                         </Grid>
 
-                        <Grid size={6} sx={{justifyItems:'center',justifyContent:'center',alignContent:'center',textAlign:'center'}}>
+                        <Grid size={6} >
 
-                            <IconButton href="https://www.instagram.com/elias_bsb/" component="a" rel="noopener noreferrer" target="_blank" color="inherit">
+                            <IconButton  href="https://www.instagram.com/elias_bsb/" component="a" rel="noopener noreferrer" target="_blank" color="inherit" sx={{gap: "10px",'&:hover': {backgroundColor: theme.palette.secondary.dark},borderRadius:"55vh"}}>
                                 
-                                <InstagramIcon />
-                            
-                            </IconButton>    
-                            
-                            <Typography>
+                                <InstagramIcon/>
+                                <Typography>
                                 
                                 Instagram
                             
-                            </Typography>
+                                </Typography>
+                            </IconButton>    
+                            
+                            
+
                         </Grid>
 
-                        <Grid size={6} sx={{textAlign:'center',justifyItems:'center',justifyContent:'center',alignContent:'center',alignItems:"center"}}>
-                            <IconButton component="a" rel="noopener noreferrer" href="mailto:eliasoliveiradapaz@gmail.com" target="_blank" color="inherit">
+                        <Grid size={6} >
+                            <IconButton component="a" href="mailto:eliasoliveiradapaz@gmail.com" target="_blank" color="inherit" rel="noopener noreferrer" sx={{gap: "10px",'&:hover': {backgroundColor: theme.palette.secondary.dark},borderRadius:"55vh"}}>
 
                                 <MailOutlineIcon/>
+                                <Typography>Email</Typography>
                             </IconButton>
                             
-                            <Typography>Email</Typography>
+                            
                         </Grid>
 
-                        <Grid size={6} sx={{textAlign:'center',justifyItems:'center',justifyContent:'center',alignContent:'center'}}>
-                            <IconButton component="a" rel="noopener noreferrer" href="https://www.linkedin.com/in/elias-oliveira-1609a3239" target="_blank" color="inherit">
+                        <Grid size={6} >
+                            <IconButton component="a" rel="noopener noreferrer" href="https://www.linkedin.com/in/elias-oliveira-1609a3239" target="_blank" color="inherit" sx={{gap: "10px",'&:hover': {backgroundColor: theme.palette.secondary.dark} ,borderRadius:"55vh"}}>
 
                                 <LinkedInIcon/>
+
+                                <Typography>LinkedIn</Typography>
+
                             </IconButton>
                             
-                            <Typography>LinkedIn</Typography>
+                            
                         </Grid>
                         
                     </Grid>

@@ -1,4 +1,5 @@
-import {Container, Grid, styled, Typography } from "@mui/material";
+import {Box, Container, Grid, styled, Typography } from "@mui/material";
+import { Animated_background } from "../components/Animated_background";
 
 export const Projects = () => {
 
@@ -23,14 +24,29 @@ export const Projects = () => {
         <StyledHome sx={{alignItems:'center'}}>
             <Container maxWidth='lg' sx={{paddingBottom:'20vh'}}>
 
-                <Grid direction={'column'} container rowSpacing={5}  sx={{alignContent:'center'}}>
+               <Grid color="primary.contrastText" container direction="column" sx={{alignItems: "center"}}>
+
+                    <Animated_background></Animated_background>
+                    
+                    <Box
+                        sx={{
+                        position: 'absolute',
+                        top: 65,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                        backgroundColor: 'rgba(0, 0, 0, 0.5)', // 0.5 = 50% escuro
+                        zIndex: 1,
+                        }}
                         
-                        <Grid >
+                    />
+                    
+                    <Box >
 
-                            
-                            <Typography color="primary.contrastText">Em construção...</Typography>
+                        <Typography variant="h5" sx={{position:"relative", zIndex:2}}>Em Construção...</Typography>
 
-                        </Grid>
+                    </Box>
+                    
 {/* 
                         <Grid sx={{justifyItems:'center',justifyContent:'center',alignContent:'center',textAlign:'center'}}>
                          

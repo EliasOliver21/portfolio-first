@@ -5,25 +5,17 @@ import  {Animated_background}  from "../components/Animated_background";
 export const Home = () => {
 
     const StyledHome = styled("div")(({theme}) => ({
-
         backgroundColor: theme.palette.primary.main,       
         paddingTop:"5vh",
-        display:"flex",
-        [theme.breakpoints.down('lg')]: { // <= mobile
-            paddingTop:"10vh",
-            height: '100vh'
-
-        },
-        [theme.breakpoints.up('xs')]: { // >=mobile
-            height:'100vh'
-            
-        },
-        [theme.breakpoints.up('md')]: { // >=mobile
-            paddingTop: "5vh",
-            height:'100vh'
-            
-        }
-        
+        display:"flex"
+        // [theme.breakpoints.down('md')]: {
+        //     minHeight: '210vh',
+        //     paddingTop: '5vh',
+        //   },
+        //   [theme.breakpoints.up('lg')]: {
+        //     minHeight: '110vh',
+        //     paddingTop: '5vh',
+        //   }
 
     }))
 
@@ -44,8 +36,8 @@ export const Home = () => {
 
     return<>
 
-        <StyledHome >
-            <Container maxWidth='lg' >
+        <StyledHome sx={{minHeight:"100vh"}}>
+            <Container maxWidth='lg'>
 
                 <Grid container rowSpacing={2} sx={{justifyContent:"center"}}>
 
@@ -65,15 +57,17 @@ export const Home = () => {
                     />
                     
                     <Box position="relative"sx={{textAlign:'center',justifyContent:'center',overflow:'hidden',zIndex:2}}>
+                        
+                        <StyledImg src={Avatar} sx={{zIndex:2}}/>
 
-                        <StyledImg src={Avatar}/>
+                        
 
                     </Box>
 
                     <Box textAlign={'center'} sx={{position:"relative", zIndex:2}}>
 
                         <Typography color="secondary" textAlign={'center'} variant="h4">OI, meu nome é Elias!</Typography>
-                        <p></p><Typography color="secondary" textAlign={'justify'} variant="h6">Sou estudante do 7º semestre do curso de engenharia de software na UnB. Sempre amei a tecnologia e a ciência, apesar de escolher as engenharias rsrs. Veja os projetos e aplicações que já desenvolvi ou participei do processo de desenvolvimento, caso queira, me contate através das minhas redes.</Typography>
+                        <p></p><Typography color="secondary" textAlign={'justify'} variant="h6">Sou estudante do 7º semestre do curso de engenharia de software na UnB. Sempre amei a tecnologia e a ciência, apesar de escolher a engenharia. Veja os projetos e aplicações que já desenvolvi ou participei do processo de desenvolvimento, caso queira, me contate através das minhas redes.</Typography>
 
                     </Box>
 
