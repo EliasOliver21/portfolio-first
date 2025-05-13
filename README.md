@@ -39,9 +39,8 @@ npm -v # Deveria imprimir "10.9.2".
 
 Após instalar o node, clone o repositório em seu dispositivo e digite os comandos abaixo no terminal:
 
-
-```
 #Instalar as dependencias do projeto
+```
 npm install
 ```
 
