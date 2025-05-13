@@ -1,6 +1,5 @@
 import { Box, Container, Grid, styled, Typography } from "@mui/material";
 import Avatar from '../assets/Img-perfil.png'
-import  {Animated_background}  from "../components/Animated_background";
 
 export const Home = () => {
 
@@ -40,21 +39,6 @@ export const Home = () => {
             <Container maxWidth='lg'>
 
                 <Grid container rowSpacing={2} sx={{justifyContent:"center"}}>
-
-
-                    <Animated_background></Animated_background>
-
-                    <Box
-                        sx={{
-                        position: 'absolute',
-                        top: 65,
-                        left: 0,
-                        width: '100%',
-                        height: '100%',
-                        backgroundColor: 'rgba(0, 0, 0, 0.5)', // 0.5 = 50% escuro
-                        zIndex: 1,
-                        }}
-                    />
                     
                     <Box position="relative"sx={{textAlign:'center',justifyContent:'center',overflow:'hidden',zIndex:2}}>
                         

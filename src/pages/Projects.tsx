@@ -1,5 +1,4 @@
 import {Box, Container, Grid, styled, Typography } from "@mui/material";
-import { Animated_background } from "../components/Animated_background";
 
 export const Projects = () => {
 
@@ -25,21 +24,6 @@ export const Projects = () => {
             <Container maxWidth='lg' sx={{paddingBottom:'20vh'}}>
 
                <Grid color="primary.contrastText" container direction="column" sx={{alignItems: "center"}}>
-
-                    <Animated_background></Animated_background>
-                    
-                    <Box
-                        sx={{
-                        position: 'absolute',
-                        top: 65,
-                        left: 0,
-                        width: '100%',
-                        height: '100%',
-                        backgroundColor: 'rgba(0, 0, 0, 0.5)', // 0.5 = 50% escuro
-                        zIndex: 1,
-                        }}
-                        
-                    />
                     
                     <Box >
 
