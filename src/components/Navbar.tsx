@@ -5,6 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Grid } from '@mui/material';
+import { Link } from 'react-router';
 // import IconButton from '@mui/material/IconButton';
 // import MenuIcon from '@mui/icons-material/Menu';
 
@@ -17,9 +18,9 @@ export const Navbar = () => {
 
             <Toolbar sx={{justifyContent:'space-evenly'}}>
 
-              <Grid><Button href='/home' color="secondary" variant='outlined' >Home</Button></Grid>
-              <Grid><Button href='/projects' color="secondary" variant='outlined'  >Projects</Button></Grid>
-              <Grid><Button href='/contacts' color="secondary" variant='outlined'  >Contact</Button></Grid>
+              <Grid><Link to='/home'><Button color="secondary" variant='outlined' >Home</Button></Link></Grid>
+              <Grid><Link to='/projects'> <Button color="secondary" variant='outlined'  >Projects</Button></Link></Grid>
+              <Grid><Link to='/contacts'> <Button color="secondary" variant='outlined'  >Contact</Button></Link></Grid>
                 
             </Toolbar>
 

@@ -9,6 +9,7 @@ import { Animated_background } from './components/Animated_background.tsx';
 
 
 
+
 export const AppRoutes = () => {
 
     return(
@@ -27,7 +28,7 @@ export const AppRoutes = () => {
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    backgroundColor: 'rgba(0, 0, 0, 0.5)', // 0.5 = 50% escuro
+                    backgroundColor: 'rgba(0, 0, 0, 0.8)', // 0.5 = 50% escuro
                     zIndex: 1,
                     }}
                     

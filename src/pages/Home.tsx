@@ -1,12 +1,12 @@
 import { Box, Container, Grid, styled, Typography } from "@mui/material";
-import Avatar from '../assets/Img-perfil.png'
+import Avatar from '../assets/perfil.png'
 
 export const Home = () => {
 
     const StyledHome = styled("div")(({theme}) => ({
         backgroundColor: theme.palette.primary.main,       
-        paddingTop:"5vh",
-        display:"flex"
+        paddingTop:"5vh"
+        
         // [theme.breakpoints.down('md')]: {
         //     minHeight: '210vh',
         //     paddingTop: '5vh',
@@ -19,9 +19,10 @@ export const Home = () => {
     }))
 
     const StyledImg = styled("img")(({ theme }) => ({
-        width: "30%",
+        width: "100%",
+        height:"90%",
         position:"relative",
-        borderRadius: "50%",
+        borderRadius: "60%",
         border: `1px solid ${theme.palette.primary.contrastText}`,
         [theme.breakpoints.up('xs')]: { // <= mobile
             width:'60%'
