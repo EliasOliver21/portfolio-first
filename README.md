@@ -1,6 +1,6 @@
-# Portifólio Pessoal
+# Portfólio Pessoal
 
-<p> Este repósitório tem como propósito documentar a criação de um portifólio pessoal, apresentando as minhas informações, projetos que já realizei/participei e meu contato. </p>
+<p> Este repósitório tem como propósito documentar a criação de um portfólio pessoal, apresentando as minhas informações, projetos que já realizei/participei e meu contato. </p>
 
 # Tecnologias Utilizadas
 
@@ -39,25 +39,27 @@ npm -v # Deveria imprimir "10.9.2".
 
 Após instalar o node, clone o repositório em seu dispositivo e digite os comandos abaixo no terminal:
 
-#Instalar as dependencias do projeto
-```
+# Instalar as dependencias do projeto
+```bash
 npm install
 ```
 
 <p>É necessário instalar também o material UI, execute:
 
-```
+```bash
 npm install @mui/material @emotion/react @emotion/styled
 ```
 
+# Executando a Aplicação
+
 <p>Após isso execute o comando abaixo para executar o projeto:
 
-```
+```bash
 npm run dev
 ```
 
 <p> Abra seu navegador e entre no seguinte link:
 
-```
+```bash
 http://localhost:5173/
 ```
