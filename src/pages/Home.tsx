@@ -1,5 +1,5 @@
 import { Box, Container, Grid, styled, Typography } from "@mui/material";
-import Avatar from '../assets/perfil.png'
+import Avatar from "../assets/perfil_for_portfolio.jpg"
 
 export const Home = () => {
 
@@ -20,7 +20,7 @@ export const Home = () => {
 
     const StyledImg = styled("img")(({ theme }) => ({
         width: "100%",
-        height:"90%",
+        height:"100%",
         position:"relative",
         borderRadius: "60%",
         border: `1px solid ${theme.palette.primary.contrastText}`,
