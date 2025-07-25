@@ -1,62 +1,100 @@
-import {Box, Container, Grid, styled, Typography } from "@mui/material";
+import {Box, CircularProgress, Container, Grid, Paper, styled, Typography } from "@mui/material";
+import { Repository, useGithubRepositories } from "../hooks/useGithubRepositories";
+import { Link } from "react-router";
 
 export const Projects = () => {
 
     const StyledHome = styled("div")(({theme}) => ({
 
         backgroundColor: theme.palette.primary.main,
-        height: '100vh',
-        display:'flex',
-        alignItems:'baseline',
-        [theme.breakpoints.up('xs')]: { // <= mobile
-            paddingTop: "100px",
-
-        },
-        [theme.breakpoints.up('md')]: { // >=mobile
-            paddingTop: "0",
-        }
+        paddingTop:'5vh'
 
     }))
 
-    return<>
+    //Estrutura do Card
+    const RepositorioCard = ({ repo }: { repo: Repository }) => {
+        return (
+            <Paper 
+                elevation={3} 
+                sx={{ 
+                    padding: 1,
+                    height: '100%'
 
-        <StyledHome sx={{alignItems:'center'}}>
-            <Container maxWidth='lg' sx={{paddingBottom:'20vh'}}>
+                }}
+            >
+            <Box>
+                <Typography variant="h6" component="h3">
+                {repo.name}
+                </Typography>
+                <Typography variant="body2" sx={{ my: 1, color: 'text.secondary' }}>
+                {repo.description || 'Repositório sem descrição.'}
+                </Typography>
+            </Box>
+            <Box sx={{ mt: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <Typography variant="caption" sx={{ fontWeight: 'bold' }}>
+                {repo.language}
+                </Typography>
+                <Link to={repo.html_url}>Repository</Link>
+            </Box>
+            </Paper>
+        );
+    };
 
-               <Grid color="primary.contrastText" container direction="column" sx={{alignItems: "center"}}>
-                    
-                    <Box >
+    //Chamanda ao hook para as informações do meu github
+    const { repositories, loading, error } = useGithubRepositories('EliasOliver21');
 
-                        <Typography variant="h5" sx={{position:"relative", zIndex:2}}>Em Construção...</Typography>
+    // Exibição do conteudo na página
+    const renderContent = () => {
+        if (loading) {
+        return <CircularProgress sx={{ display: 'block', margin: 'auto', color: 'white' }} />;
+        }
 
-                    </Box>
-                    
-{/* 
-                        <Grid sx={{justifyItems:'center',justifyContent:'center',alignContent:'center',textAlign:'center'}}>
-                         
-                            <Typography color="primary.contrastText">Github</Typography>
+        if (error) {
+        return <Typography color="error" align="center">{error}</Typography>;
+        }
 
-                        </Grid>
+        return (
+        <Grid container spacing={2}>
+            {repositories.map(repo => (
 
-                        <Grid sx={{textAlign:'center',justifyItems:'center',justifyContent:'center',alignContent:'center',alignItems:"center"}}>
-                            
-                            <Typography color="primary.contrastText">Github</Typography>
+                <RepositorioCard repo={repo} />
+            ))}
+        </Grid>
+        );
+    };
 
-                        </Grid>
-
-                        <Grid sx={{textAlign:'center',justifyItems:'center',justifyContent:'center',alignContent:'center'}}>
-                          
-                            
-                            <Typography color="primary.contrastText">Github</Typography>
-
-                             
-                        </Grid> */}
-                        
-                </Grid>
-
-                
-                
+    return (
+        <StyledHome sx={{minHeight:"100vh"}}>
+            <Container maxWidth='lg' sx={{position:"relative", zIndex:2}}>
+                <Typography variant="h4" color="primary.contrastText"  align="center" gutterBottom>
+                    Meus Projetos
+                </Typography>
+                {renderContent()}
             </Container>
         </StyledHome>
-    </>
-}
+    );
+    };
+
+
+//     return<>
+
+//         <StyledHome sx={{alignItems:'center' , minHeight:"100vh"}}>
+//             <Container maxWidth='lg' sx={{paddingBottom:'20vh'}}>
+
+//                <Grid color="primary.contrastText" container direction="column" sx={{alignItems: "center"}}>
+                    
+//                     <Box >
+
+//                         <Typography variant="h5" sx={{position:"relative", zIndex:2}}><ListaDeRepositorios></ListaDeRepositorios></Typography>
+
+//                     </Box>
+                    
+                        
+//                 </Grid>
+
+                
+                
+//             </Container>
+//         </StyledHome>
+//     </>
+// }
