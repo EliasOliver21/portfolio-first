@@ -1,6 +1,6 @@
-import {Box, CircularProgress, Container, Grid, Paper, styled, Typography } from "@mui/material";
+import {Box, CircularProgress, Container, Grid, IconButton, Paper, styled, Typography } from "@mui/material";
 import { Repository, useGithubRepositories } from "../hooks/useGithubRepositories";
-import { Link } from "react-router";
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 export const Projects = () => {
 
@@ -18,10 +18,10 @@ export const Projects = () => {
                 elevation={3} 
                 sx={{ 
                     padding: 1,
-                    height: '100%'
 
                 }}
             >
+            <Box>
             <Box>
                 <Typography variant="h6" component="h3">
                 {repo.name}
@@ -32,9 +32,13 @@ export const Projects = () => {
             </Box>
             <Box sx={{ mt: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <Typography variant="caption" sx={{ fontWeight: 'bold' }}>
-                {repo.language}
+                    {repo.language}
                 </Typography>
-                <Link to={repo.html_url}>Repository</Link>
+                <IconButton component="a" rel="noopener noreferrer" target="_blank" href={repo.html_url} color="inherit" sx={{gap: "10px",'&:hover': {backgroundColor: "Background"},borderRadius:"55vh"}}>
+                    <GitHubIcon/>
+                </IconButton>
+                
+            </Box>
             </Box>
             </Paper>
         );
@@ -54,12 +58,21 @@ export const Projects = () => {
         }
 
         return (
-        <Grid container spacing={2}>
-            {repositories.map(repo => (
 
-                <RepositorioCard repo={repo} />
-            ))}
+        <Grid justifyContent={"center"}>
+ 
+                <Grid container spacing={2} justifyContent={"center"} >
+
+                    {repositories.map(repo => (
+
+                    <RepositorioCard repo={repo}/>
+                    ))}
+
+                </Grid>
+        
+
         </Grid>
+        
         );
     };
 
@@ -73,7 +86,7 @@ export const Projects = () => {
             </Container>
         </StyledHome>
     );
-    };
+};
 
 
 //     return<>

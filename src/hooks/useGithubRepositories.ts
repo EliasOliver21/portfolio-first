@@ -32,7 +32,8 @@ export const useGithubRepositories = (username: string) => {
         }
         const allRepos : Repository[] = await response.json();
         //Filtrando repositórios
-        const noForks = allRepos.filter(repo => !repo.name.includes("Microsoft-Activation-Scripts"))
+        const remove_repos : string[] = ["Microsoft-Activation-Scripts", "EliasOliver21", "tutorial-git"]
+        const noForks = allRepos.filter(repo => !remove_repos.includes(repo.name));
         
         setRepositories(noForks);
       } catch (err) {
